@@ -1,0 +1,29 @@
+# Pipeline configuration. Paths relative to the repo root.
+
+data:
+  processed_dir: data/processed
+  artifacts_dir: data/artifacts
+  n_vendors: 60
+  history_days: 365
+  n_deteriorating: 6
+  seed: 42
+
+scoring:
+  decay_half_life_days: 90
+  category_weights:
+    security: 0.30
+    financial: 0.25
+    delivery: 0.20
+    compliance: 0.15
+    concentration: 0.10
+  saturation_kappa: 6.0       # severity-mass that maps to ~63 category points
+  watch_score: 70
+  watch_trend: 8              # score points gained in 30 days
+
+rag:
+  guide_path: docs/diligence.md
+  top_k: 3
+  min_score: 1.0
+
+eval:
+  experiment_name: riskradar
