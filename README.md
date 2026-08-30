@@ -17,8 +17,6 @@
 
 </div>
 
-> **Portfolio project.** Built to demonstrate the Config-as-Code rubric pattern and time-decay risk modelling on realistic (synthetic) vendor data. Not hardened for production use.
-
 ---
 
 ## The problem
