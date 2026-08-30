@@ -17,6 +17,8 @@ dependencies = [
     "rank-bm25>=0.2",
     "typer>=0.12",
     "rich>=13",
+    "streamlit>=1.36",
+    "mlflow>=2.14",
 ]
 
 [dependency-groups]
@@ -28,7 +30,7 @@ dev = [
 ]
 
 [tool.uv]
-# Broken ujson wheel on Windows boxes without msvcp140.dll (see wave-1 repos).
+# Broken ujson wheel on Windows boxes without msvcp140.dll.
 override-dependencies = ["ujson; sys_platform == 'linux'"]
 
 [build-system]
